@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+body{
+  background: #0A0A1F;
+}
+
+@layer utilities {
+  .bgPinkColor {
+    @apply bg-gradient-to-r from-[#B5096C] via-[#F12170] to-[#F12170];
+  }
+
+  .textPinkColor {
+    @apply bg-gradient-to-r from-[#B5096C] via-[#F12170] to-[#F12170] bg-clip-text text-transparent;
+  }
+
+  .hoverPinkColor {
+    @apply hover:bg-gradient-to-r hover:from-[#B5096C] hover:via-[#F12170] hover:to-[#F12170] hover:bg-clip-text hover:text-transparent;
+    /* hover:!bg-gradient-to-r hover:from-[#B5096C] hover:via-[#F12170] hover:to-[#F12170] hover:!bg-clip-text hover:!text-transparent hover:border hover:!border-pink-600 */
+  }
+
+   @keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+}
